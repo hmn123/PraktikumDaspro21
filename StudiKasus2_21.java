@@ -28,6 +28,25 @@ public class StudiKasus2_21 {
 
         }
         
+        }else if (jenisKegiatan.equalsIgnoreCase("PKM")) {
+            System.out.print("Status pendanaan PKM (1 = lolos, 0 = tidak lolos) : ");
+            int statusPKM = sc.nextInt();
+        if (statusPKM == 1){
+            if (jumlahDokumen == 4) {
+                System.out.print("Status : Dokumen lengkap. Dana penghargaan diberikan");
+            }else {
+                int kurang = 4 - jumlahDokumen;
+                System.out.print("Status : dokumen tidak lengkap. (kurang " + kurang + "dokumen). Dana penghargaan tidak diberikan. ");
+
+            }
+            }else  {
+                System.out.print("Status : Tidak lolos pendanaan PKM. Dana penghargaan tidak diberikan");
+
+            }
+        }else {
+            System.out.print("Status : jenis kegiatan tidak memenuhi syarat. Dana penghargaan tidak diberikan");
         }
+           
+        sc.close();
     }
- }
+}
